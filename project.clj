@@ -1,10 +1,11 @@
 (defproject super/ripperman "0.1.0-SNAPSHOT"
-  :description "clojure wrapper around MakeMkv command-line interface (makemkvcon)"
+  :description "clojure wrapper around MakeMKV command-line interface (makemkvcon)"
 
   :license {}
 
-  :dependencies [[com.taoensso/timbre "4.10.0"]
+  :dependencies [[instaparse "1.4.10"]
 
-                 [me.raynes/fs "1.4.6"]
+                 [org.clojure/clojure "1.10.0"]
+                 [org.clojure/data.csv "0.1.4"]
 
-                 [org.clojure/clojure "1.10.0"]])
+                 [com.taoensso/timbre "4.10.0"]])
