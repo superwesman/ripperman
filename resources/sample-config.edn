@@ -1,0 +1,26 @@
+{
+ :minimum-length-s 1324
+
+ :ripper-config    {:executable "/Applications/MakeMKV.app/Contents/MacOS/makemkvcon"
+                    :disc 0}
+
+ :encoder-config   {:executable "/Applications/HandBrakeCLI"
+                    :options    {:verbose         true
+                                 :encoder         :x265
+                                 :encoder-preset  :medium
+                                 :quality         24.0
+                                 :markers         true
+                                 :rate            30
+                                 :pfr             true
+                                 :audio-lang-list [:eng]
+                                 :all-audio       true
+                                 :aencoder        :flac24
+                                 :arate           :auto
+                                 :mixdown         :auto
+                                 :comb-detect     true
+                                 :decomb          true
+                                 :native-language :eng
+                                 :subtitle        :scan
+                                 :subtitle-forced true
+                                 :subtitle-burned true}}
+ }

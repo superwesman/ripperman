@@ -1,0 +1,5 @@
+# see "info" .out samples
+makemkvcon -r --cache=1 info disc:0
+
+# see "mkv" .out samples
+/Applications/MakeMKV.app/Contents/MacOS/makemkvcon -r mkv disc:0 2 /tmp/
