@@ -125,7 +125,7 @@
 
 (defmethod makemkvcon :default
   [executable switches command parameters]
-  (println command " is not a valid command!")
+  (log/errorf "%s is not a valid command!" command)
   executable)
 
 (defmethod makemkvcon :info
@@ -142,7 +142,7 @@
 
 (defmethod makemkvcon :f
   [executable switches command parameters]
-  )
+  (log/warnf "%s is not implemented! Feel free to submit a PR" command))
 
 (defmethod makemkvcon :stream
   [executable switches command parameters]
@@ -187,7 +187,7 @@
         handler (fn [{:keys [exit out err]}]
                   (log/infof "Exit Code: %s , Err: %s" exit err)
                   (p/mkv out))]
-    command #_(execute! handler command)))
+    (execute! handler command)))
 
 (def memoized-execute (memoize execute!))
 
